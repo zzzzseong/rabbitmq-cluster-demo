@@ -10,7 +10,7 @@ public class RMQProducer {
 
     private final RabbitTemplate rabbitTemplate;
 
-    public void produce(String queue, String message) {
+    public void enqueue(String queue, String message) {
         rabbitTemplate.convertAndSend(queue, message);
     }
 }
